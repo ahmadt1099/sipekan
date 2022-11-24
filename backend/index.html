@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Notes API Documentation</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+  </head>
+  <body>
+    <main>
+      <button class="sidebar-toggle" aria-label="Menu">
+        <div class="sidebar-toggle-button"><span></span><span></span><span></span></div>
+      </button>
+      <aside class="sidebar">
+        <div class="sidebar-nav">
+          <ul>
+            <li><a class="section-link" href="#/?id=dicoding-notes-api" title="Dicoding Notes API">Dicoding Notes API</a></li>
+            <ul>
+              <li><a class="section-link" href="#/?id=endpoint" title="Endpoint">Endpoint</a></li>
+              <ul>
+                <li><a class="section-link" href="#/?id=user" title="User">User</a></li>
+                <ul>
+                  <li><a class="section-link" href="#/?id=register" title="Register">Register</a></li>
+                  <li><a class="section-link" href="#/?id=login" title="Login">Login</a></li>
+                  <li><a class="section-link" href="#/?id=get-user-logged-in" title="Get User logged in">Get User logged in</a></li>
+                </ul>
+                <li><a class="section-link" href="#/?id=notes" title="Notes">Notes</a></li>
+                <ul>
+                  <li><a class="section-link" href="#/?id=create-note" title="Create Note">Create Note</a></li>
+                  <li><a class="section-link" href="#/?id=get-notes-non-archived" title="Get Notes (non-archived)">Get Notes (non-archived)</a></li>
+                  <li><a class="section-link" href="#/?id=get-archived-notes" title="Get Archived Notes">Get Archived Notes</a></li>
+                  <li><a class="section-link" href="#/?id=get-single-note" title="Get Single Note">Get Single Note</a></li>
+                  <li><a class="section-link" href="#/?id=archive-note" title="Archive Note">Archive Note</a></li>
+                  <li><a class="section-link" href="#/?id=unarchive-note" title="Unarchive Note">Unarchive Note</a></li>
+                  <li><a class="section-link" href="#/?id=delete-note" title="Delete Note">Delete Note</a></li>
+                </ul>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </aside>
+      <section class="content">
+        <article class="markdown-section" id="main">
+          <h1 id="dicoding-notes-api">
+            <a href="#/?id=dicoding-notes-api" data-id="dicoding-notes-api" class="anchor"><span>Dicoding Notes API</span></a>
+          </h1>
+          <blockquote>
+            <p>API untuk menyimpan catatan pribadi secara online. Digunakan untuk latihan kelas Dicoding Academy.</p>
+          </blockquote>
+          <h2 id="endpoint">
+            <a href="#/?id=endpoint" data-id="endpoint" class="anchor"><span>Endpoint</span></a>
+          </h2>
+          <p><a href="https://notes-api.dicoding.dev/v1" target="_blank" rel="noopener">https://notes-api.dicoding.dev/v1</a></p>
+          <h3 id="user">
+            <a href="#/?id=user" data-id="user" class="anchor"><span>User</span></a>
+          </h3>
+          <h4 id="register">
+            <a href="#/?id=register" data-id="register" class="anchor"><span>Register</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/register</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>POST</code></li>
+              </ul>
+            </li>
+            <li>
+              Request Body
+              <ul>
+                <li><code>name</code> as <code>string</code></li>
+                <li><code>email</code> as <code>string</code>, must be unique</li>
+                <li><code>password</code> as <code>string</code>, must be at least 6 characters</li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+  "status": "success",
+  "message": "User Created"
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="login">
+            <a href="#/?id=login" data-id="login" class="anchor"><span>Login</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/login</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>POST</code></li>
+              </ul>
+            </li>
+            <li>
+              Request Body
+              <ul>
+                <li><code>email</code> as <code>string</code></li>
+                <li><code>password</code> as <code>string</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "success",
+    "message": "User logged successfully",
+    "data": {
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLXlqNXBjX0xBUkNfQWdLNjEiLCJpYXQiOjE2NDE3OTk5NDl9.flEMaQ7zsdYkxuyGbiXjEDXO8kuDTcI__3UjCwt6R_I"
+    }
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="get-user-logged-in">
+            <a href="#/?id=get-user-logged-in" data-id="get-user-logged-in" class="anchor"><span>Get User logged in</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/users/me</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>GET</code></li>
+              </ul>
+            </li>
+            <li>
+              Headers:
+              <ul>
+                <li><code>Authorization</code>: <code>Bearer &lt;accessToken&gt;</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "success",
+    "message": "User retrieved",
+    "data": {
+        "id": "user-yj5pc_LARC_AgK61",
+        "name": "John Doe",
+        "email": "john@example.com"
+    }
+}</code></pre>
+            </li>
+          </ul>
+          <h3 id="notes">
+            <a href="#/?id=notes" data-id="notes" class="anchor"><span>Notes</span></a>
+          </h3>
+          <h4 id="create-note">
+            <a href="#/?id=create-note" data-id="create-note" class="anchor"><span>Create Note</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/notes</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>POST</code></li>
+              </ul>
+            </li>
+            <li>
+              Headers:
+              <ul>
+                <li><code>Authorization</code>: <code>Bearer &lt;accessToken&gt;</code></li>
+              </ul>
+            </li>
+            <li>
+              Request Body
+              <ul>
+                <li><code>title</code> as <code>string</code></li>
+                <li><code>body</code> as <code>string</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+  "status": "success",
+  "message": "Note created",
+  "data": {
+      "id": "notes-_O6A6TJcCYUWO7t4",
+      "title": "Hello, Notes!",
+      "body": "My new notes.",
+      "owner": "user-l-wposXQYGosf0ZA",
+      "archived": false,
+      "createdAt": "2022-07-28T10:12:12.396Z"
+  }
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="get-notes-non-archived">
+            <a href="#/?id=get-notes-non-archived" data-id="get-notes-non-archived" class="anchor"><span>Get Notes (non-archived)</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/notes</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>GET</code></li>
+              </ul>
+            </li>
+            <li>
+              Headers:
+              <ul>
+                <li><code>Authorization</code>: <code>Bearer &lt;accessToken&gt;</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+  "status": "success",
+  "message": "Notes retrieved",
+  "data": [
+      {
+          "id": "notes-jT-jjsyz61J8XKiI",
+          "title": "Welcome to Notes, Dimas!",
+          "body": "Welcome to Notes! This is your first note. You can archive it, delete it, or create new ones.",
+          "createdAt": "2022-07-28T10:03:12.594Z",
+          "archived": false,
+          "owner": "user-l-wposXQYGosf0ZA"
+      }
+  ]
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="get-archived-notes">
+            <a href="#/?id=get-archived-notes" data-id="get-archived-notes" class="anchor"><span>Get Archived Notes</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/notes/archived</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>GET</code></li>
+              </ul>
+            </li>
+            <li>
+              Headers:
+              <ul>
+                <li><code>Authorization</code>: <code>Bearer &lt;accessToken&gt;</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+  "status": "success",
+  "message": "Notes retrieved",
+  "data": [
+      {
+          "id": "notes-jT-jjsyz61J8XKiI",
+          "title": "Welcome to Notes, Dimas!",
+          "body": "Welcome to Notes! This is your first note. You can archive it, delete it, or create new ones.",
+          "createdAt": "2022-07-28T10:03:12.594Z",
+          "archived": true,
+          "owner": "user-l-wposXQYGosf0ZA"
+      }
+  ]
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="get-single-note">
+            <a href="#/?id=get-single-note" data-id="get-single-note" class="anchor"><span>Get Single Note</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/notes/{note_id}</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>GET</code></li>
+              </ul>
+            </li>
+            <li>
+              Headers:
+              <ul>
+                <li><code>Authorization</code>: <code>Bearer &lt;accessToken&gt;</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+  "status": "success",
+  "message": "Note retrieved",
+  "data": {
+      "id": "notes-jT-jjsyz61J8XKiI",
+      "title": "Welcome to Notes, Dimas!",
+      "body": "Welcome to Notes! This is your first note. You can archive it, delete it, or create new ones.",
+      "createdAt": "2022-07-28T10:03:12.594Z",
+      "archived": false,
+      "owner": "user-l-wposXQYGosf0ZA"
+  }
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="archive-note">
+            <a href="#/?id=archive-note" data-id="archive-note" class="anchor"><span>Archive Note</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/notes/{note_id}/archive</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>POST</code></li>
+              </ul>
+            </li>
+            <li>
+              Headers:
+              <ul>
+                <li><code>Authorization</code>: <code>Bearer &lt;accessToken&gt;</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+  "status": "success",
+  "message": "Note archived"
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="unarchive-note">
+            <a href="#/?id=unarchive-note" data-id="unarchive-note" class="anchor"><span>Unarchive Note</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/notes/{note_id}/unarchive</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>POST</code></li>
+              </ul>
+            </li>
+            <li>
+              Headers:
+              <ul>
+                <li><code>Authorization</code>: <code>Bearer &lt;accessToken&gt;</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+  "status": "success",
+  "message": "Note unarchived"
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="delete-note">
+            <a href="#/?id=delete-note" data-id="delete-note" class="anchor"><span>Delete Note</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/notes/{note_id}</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>DELETE</code></li>
+              </ul>
+            </li>
+            <li>
+              Headers:
+              <ul>
+                <li><code>Authorization</code>: <code>Bearer &lt;accessToken&gt;</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+  "status": "success",
+  "message": "Note deleted"
+}</code></pre>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <script>
+      window.$docsify = {
+        name: '',
+        repo: '',
+      };
+    </script>
+    <!-- Docsify v4 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+    <div class="progress" style="opacity: 0; width: 0%"></div>
+  </body>
+</html>

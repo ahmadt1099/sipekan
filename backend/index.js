@@ -11,6 +11,9 @@ import AuthRoute from './routes/AuthRoute.js';
 import SubmitRoute from './routes/SubmitRoute.js';
 import HadiahRoute from './routes/HadiahRoute.js'
 import TukarRoute from './routes/TukarRoute.js'
+import path from 'path';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 dotenv.config();
 
 const app = express();
@@ -56,9 +59,13 @@ app.use(SubmitRoute);
 app.use(HadiahRoute);
 app.use(TukarRoute);
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+// app.get('/', (req, res) => {
+//   res.send('Hello World!')
+// })
+const __dirname = dirname(fileURLToPath(import.meta.url));
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, '/index.html'));
+});
 
 
 app.listen(process.env.APP_PORT, () => {
