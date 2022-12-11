@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SIPEKAN API Documentation</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+  </head>
+
+  <body>
+    <main>
+      <button class="sidebar-toggle" aria-label="Menu">
+        <div class="sidebar-toggle-button"><span></span><span></span><span></span></div>
+      </button>
+      <aside class="sidebar">
+        <div class="sidebar-nav">
+          <ul>
+            <li><a class="section-link" href="#/?id=dicoding-notes-api" title="SIPEKAN API Documentation">SIPEKAN API Documentation</a></li>
+            <ul>
+              <li><a class="section-link" href="#/?id=endpoint" title="Endpoint">Endpoint</a></li>
+              <ul>
+                <li><a class="section-link" href="#/?id=auth" title="User">Auth</a></li>
+                <ul>
+                  <li><a class="section-link" href="#/?id=register" title="Register">Register</a></li>
+                  <li><a class="section-link" href="#/?id=login" title="Login">Login</a></li>
+                  <li><a class="section-link" href="#/?id=get-user-logged-in" title="Get User logged in">Get User logged in</a></li>
+                  <li><a class="section-link" href="#/?id=logout" title="Get User logged in">Logout</a></li>
+                </ul>
+                <li><a class="section-link" href="#/?id=user" title="Users">User</a></li>
+                <ul>
+				  <li><a class="section-link" href="#/?id=add-new-user" title="Create Note">Add New User</a></li>
+				  <li><a class="section-link" href="#/?id=get-all-user" title="Get All User">Get All User</a></li>
+                  <li><a class="section-link" href="#/?id=get-single-user" title="Get Single User">Get Single User</a></li>
+                  <li><a class="section-link" href="#/?id=update-user" title="Update User">Update User</a></li>
+                  <li><a class="section-link" href="#/?id=delete-user" title="Delete User">Delete User</a></li>
+                </ul>
+                <li><a class="section-link" href="#/?id=tugas" title="Tugas">Tugas</a></li>
+                <ul>
+				  <li><a class="section-link" href="#/?id=add-new-tugas" title="Create Tugas">Add New Tugas</a></li>
+				  <li><a class="section-link" href="#/?id=get-all-tugas" title="Get All Tugas">Get All Tugas</a></li>
+                  <li><a class="section-link" href="#/?id=get-single-tugas" title="Get Single Tugas">Get Single Tugas</a></li>
+                  <li><a class="section-link" href="#/?id=update-tugas" title="Update Tugas">Update Tugas</a></li>
+                  <li><a class="section-link" href="#/?id=delete-tugas" title="Delete Tugas">Delete Tugas</a></li>
+                </ul>
+                <li><a class="section-link" href="#/?id=submit" title="Submit">Submit</a></li>
+                <ul>
+				  <li><a class="section-link" href="#/?id=submit-new-tugas" title="Submit New Tugas">Submit New Tugas</a></li>
+				  <li><a class="section-link" href="#/?id=get-all-submit" title="Get All Submit">Get All Submit</a></li>
+                  <li><a class="section-link" href="#/?id=get-single-submit" title="Get Single Submit">Get Single Submit</a></li>
+                </ul>
+                <li><a class="section-link" href="#/?id=reward" title="Hadiah">Hadiah</a></li>
+                <ul>
+				  <li><a class="section-link" href="#/?id=add-new-reward" title="Create Hadiah">Add New Hadiah</a></li>
+				  <li><a class="section-link" href="#/?id=get-all-reward" title="Get All Hadiah">Get All Hadiah</a></li>
+                  <li><a class="section-link" href="#/?id=get-single-reward" title="Get Single Hadiah">Get Single Hadiah</a></li>
+                  <li><a class="section-link" href="#/?id=update-reward" title="Update Hadiah">Update Hadiah</a></li>
+                  <li><a class="section-link" href="#/?id=delete-reward" title="Delete Hadiah">Delete Hadiah</a></li>
+                </ul>
+                <li><a class="section-link" href="#/?id=redeem" title="Penukaran">Penukaran</a></li>
+                <ul>
+				  <li><a class="section-link" href="#/?id=add-new-redeem" title="Add New Penukaran">Submit New Penukaran</a></li>
+				  <li><a class="section-link" href="#/?id=get-all-redeem" title="Get All Penukaran">Get All Penukaran</a></li>
+                  <li><a class="section-link" href="#/?id=get-single-redeem" title="Get Single Penukaran">Get Single Penukaran</a></li>
+                </ul>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </aside>
+      <section class="content">
+        <article class="markdown-section" id="main">
+          <h1 id="dicoding-notes-api">
+            <a href="#/?id=dicoding-notes-api" data-id="dicoding-notes-api" class="anchor"><span>SIPEKAN API Documentation</span></a>
+          </h1>
+          <blockquote>
+            <p>API digunakan untuk project capstone SIPEKAN - Sistem Pengelola Keseharian Anak oleh Tim C22-082.</p>
+          </blockquote>
+          <h2 id="endpoint">
+            <a href="#/?id=endpoint" data-id="endpoint" class="anchor"><span>Endpoint</span></a>
+          </h2>
+          <p><a href="https://notes-api.dicoding.dev/v1" target="_blank" rel="noopener">https://api.sipekan.my.id</a></p>
+          <h3 id="auth">
+            <a href="#/?id=auth" data-id="user" class="anchor"><span>Auth</span></a>
+          </h3>
+          <h4 id="register">
+            <a href="#/?id=register" data-id="register" class="anchor"><span>Register</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/register</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>POST</code></li>
+              </ul>
+            </li>
+            <li>
+              Request Body
+              <ul>
+                <li><code>name</code> as <code>string</code></li>
+                <li><code>email</code> as <code>string</code>, must be unique</li>
+                <li><code>password</code> as <code>string</code></li>
+                <li><code>confirmPassword</code> as <code>string</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+  "status": "Berhasil",
+  "pesan": "User Berhasil Didaftarkan"
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="login">
+            <a href="#/?id=login" data-id="login" class="anchor"><span>Login</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/login</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>POST</code></li>
+              </ul>
+            </li>
+            <li>
+              Request Body
+              <ul>
+                <li><code>email</code> as <code>string</code></li>
+                <li><code>password</code> as <code>string</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Anda Berhasil Login",
+    "data": {
+        "user_id": "ecbaa95d-84fe-4809-a9e1-b8e05126ab7b",
+        "name": "ayah",
+        "email": "ayah@gmail.com",
+        "role": "admin"
+    }
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="get-user-logged-in">
+            <a href="#/?id=get-user-logged-in" data-id="get-user-logged-in" class="anchor"><span>Get User logged in</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/me</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>GET</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Anda Telah Login",
+    "user": {
+        "user_id": "ecbaa95d-84fe-4809-a9e1-b8e05126ab7b",
+        "name": "ayah",
+        "email": "ayah@gmail.com",
+        "role": "admin"
+    }
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="logout">
+            <a href="#/?id=logout" data-id="get-user-logged-in" class="anchor"><span>Logout</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/logout</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>DELETE</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Anda Telah Logout"
+}</code></pre>
+            </li>
+          </ul>
+          <h3 id="user">
+            <a href="#/?id=user" data-id="user" class="anchor"><span>User</span></a>
+          </h3>
+          <h4 id="add-new-user">
+            <a href="#/?id=add-new-user" data-id="add-new-user" class="anchor"><span>Add New User</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/user</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>POST</code></li>
+              </ul>
+            </li>
+            <li>
+              Request Body
+              <ul>
+                <li><code>name</code> as <code>string</code></li>
+                <li><code>email</code> as <code>string</code>, must be unique</li>
+                <li><code>password</code> as <code>string</code></li>
+                <li><code>confirmPassword</code> as <code>string</code></li>
+                <li><code>role</code> as <code>admin</code> or <code>user</code></li>
+                <li><code>point</code> as <code>integer</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "User Berhasil Ditambahkan"
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="get-all-user">
+            <a href="#/?id=get-all-user" data-id="get-all-user" class="anchor"><span>Get All User</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/user</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>GET</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+  "status": "Berhasil",
+    "pesan": "Menampilkan User",
+    "user": [
+        {
+            "user_id": "ecbaa95d-84fe-4809-a9e1-b8e05126ab7b",
+            "name": "ayah",
+            "email": "ayah@gmail.com",
+            "role": "admin",
+            "point": null
+        },
+        {
+            "user_id": "a97bb141-d6e9-44ab-ae38-10ea2eac5859",
+            "name": "anonim",
+            "email": "anonim@gmail.com",
+            "role": "user",
+            "point": 0
+        }
+    ]
+}</code></pre>
+            </li>
+          </ul>
+                    <h4 id="get-single-user">
+            <a href="#/?id=get-single-user" data-id="get-single-user" class="anchor"><span>Get Single User</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/user/{user_id}</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>GET</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Menampilkan User",
+    "user": {
+        "user_id": "a97bb141-d6e9-44ab-ae38-10ea2eac5859",
+        "name": "anonim",
+        "email": "anonim@gmail.com",
+        "role": "user",
+        "point": 0
+    }
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="update-user">
+            <a href="#/?id=update-user" data-id="update-user" class="anchor"><span>Update User</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/user/{user_id}</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>PATCH</code></li>
+              </ul>
+            </li>
+            <li>
+              Request Body
+              <ul>
+                <li><code>name</code> as <code>string</code></li>
+                <li><code>email</code> as <code>string</code>, must be unique</li>
+                <li><code>password</code> as <code>string</code></li>
+                <li><code>confirmPassword</code> as <code>string</code></li>
+                <li><code>role</code> as <code>admin</code> or <code>user</code></li>
+                <li><code>point</code> as <code>integer</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Data User Telah Diubah"
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="delete-user">
+            <a href="#/?id=delete-user" data-id="delete-user" class="anchor"><span>Delete User</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/user/{user_id}</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>DELETE</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "User Telah Dihapus"
+}</code></pre>
+            </li>
+          </ul>
+          <h3 id="tugas">
+            <a href="#/?id=tugas" data-id="tugas" class="anchor"><span>Tugas</span></a>
+          </h3>
+          <h4 id="add-new-tugas">
+            <a href="#/?id=add-new-tugas" data-id="add-new-tugas" class="anchor"><span>Add New Tugas</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/tugas</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>POST</code></li>
+              </ul>
+            </li>
+            <li>
+              Request Body
+              <ul>
+                <li><code>title</code> as <code>string</code></li>
+                <li><code>description</code> as <code>string</code></li>
+
+                <li><code>point</code> as <code>integer</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Tugas Berhasil Ditambahkan"
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="get-all-tugas">
+            <a href="#/?id=get-all-tugas" data-id="get-all-tugas" class="anchor"><span>Get All Tugas</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/tugas</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>GET</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Menampilkan Tugas",
+    "task": [
+        {
+            "task_id": "ecbaa95d-84fe-4809-a9e1-b8e05126ab7b",
+            "title": "tugas 1",
+            "description": "description tugas 1",
+            "submited": 1,
+            "point": 0
+        },
+        {
+           "task_id": "fgdfedasa-45gd-asdf-a9e1-b8e051ffddsb",
+            "title": "tugas 2",
+            "description": "description tugas 2",
+            "submited": 1,
+            "point": 0
+        }
+    ]
+}</code></pre>
+            </li>
+          </ul>
+                    <h4 id="get-single-tugas">
+            <a href="#/?id=get-single-tugas" data-id="get-single-tugas" class="anchor"><span>Get Single Tugas</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/tugas/{user_id}</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>GET</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Menampilkan Tugas",
+    "task": {
+           "task_id": "fgdfedasa-45gd-asdf-a9e1-b8e051ffddsb",
+            "title": "tugas 2",
+            "description": "description tugas 2",
+            "submited": 1,
+            "point": 0
+    }
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="update-tugas">
+            <a href="#/?id=update-tugas" data-id="update-tugas" class="anchor"><span>Update Tugas</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/tugas/{user_id}</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>PATCH</code></li>
+              </ul>
+            </li>
+            <li>
+              Request Body
+              <ul>
+                <li><code>title</code> as <code>string</code></li>
+                <li><code>description</code> as <code>string</code></li>
+
+                <li><code>point</code> as <code>integer</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Data Tugas Telah Diubah"
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="delete-tugas">
+            <a href="#/?id=delete-tugas" data-id="delete-tugas" class="anchor"><span>Delete Tugas</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/tugas/{user_id}</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>DELETE</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Tugas Telah Dihapus"
+}</code></pre>
+            </li>
+          </ul>
+          <h3 id="tugas">
+            <a href="#/?id=submit" data-id="submit" class="anchor"><span>Submit</span></a>
+          </h3>
+          <h4 id="submit-new-tugas">
+            <a href="#/?id=submit-new-tugas" data-id="submit-new-tugas" class="anchor"><span>Submit New Tugas</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/submit/{task_id}</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>POST</code></li>
+              </ul>
+            </li>
+            <li>
+              Headers
+              <ul>
+                <li><code>Content-Type</code> : <code>multipart/form-data</code></li>
+              </ul>
+            </li>
+            <li>
+              Request Body
+              <ul>
+                <li><code>comment</code> as <code>string</code></li>
+                <li><code>file</code> as <code>file</code>, must be a valid image file, max size 1MB</li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Tugas Berhasil Disubmit"
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="get-all-submit">
+            <a href="#/?id=get-all-submit" data-id="get-all-submit" class="anchor"><span>Get All Submit</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/submit</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>GET</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Menampilkan Submit",
+    "submit": [
+        {
+            "submit_id": "5f2ea3ec-1fa4-4edc-a08c-549ab4fffb4a",
+            "comment": "sudah gosok gigi",
+            "file": "8e31ecf6285f9c3e12036c24ac3d38cb.jpg",
+            "url": "http://localhost:5000/public/submit/8e31ecf6285f9c3e12036c24ac3d38cb.jpg",
+            "user": {
+                "name": "anak"
+            },
+            "task": {
+                "title": "gosok gigi"
+            }
+        },
+                {
+            "submit_id": "4564sa-fdss3-df67-ssc4-safdsdgfdgfhh",
+            "comment": "sudah makan",
+            "file": "dzgzfdhfddszffghgc5essadzfgcgj.jpg",
+            "url": "http://localhost:5000/public/submit/dzgzfdhfddszffghgc5essadzfgcgj.jpg",
+            "user": {
+                "name": "anak"
+            },
+            "task": {
+                "title": "asarapan"
+            }
+        }
+    ]
+}</code></pre>
+            </li>
+          </ul>
+                    <h4 id="get-single-submit">
+            <a href="#/?id=get-single-submit" data-id="get-single-submit" class="anchor"><span>Get Single Submit</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/submit/{submit_id}</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>GET</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Menampilkan Submit",
+    "submit": {
+        "submit_id": "5f2ea3ec-1fa4-4edc-a08c-549ab4fffb4a",
+        "comment": "sudah gosok gigi",
+        "file": "8e31ecf6285f9c3e12036c24ac3d38cb.jpg",
+        "url": "http://localhost:5000/public/submit/8e31ecf6285f9c3e12036c24ac3d38cb.jpg",
+        "user": {
+            "name": "anak"
+        },
+        "task": {
+            "title": "berdoa setelah makan"
+        }
+    }
+}</code></pre>
+            </li>
+          </ul>
+          <h3 id="reward">
+            <a href="#/?id=reward" data-id="reward" class="anchor"><span>Hadiah</span></a>
+          </h3>
+          <h4 id="add-new-reward">
+            <a href="#/?id=add-new-reward" data-id="add-new-tugas" class="anchor"><span>Add New Hadiah</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/reward</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>POST</code></li>
+              </ul>
+            </li>
+            <li>
+              Headers
+              <ul>
+                <li><code>Content-Type</code> : <code>multipart/form-data</code></li>
+              </ul>
+            </li>
+            <li>
+              Request Body
+              <ul>
+                <li><code>title</code> as <code>string</code></li>
+                <li><code>description</code> as <code>string</code></li>
+                <li><code>price</code> as <code>integer</code></li>
+                <li><code>image</code> as <code>file</code>, must be a valid image file, max size 1MB</li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Hadiah Sudah Ditambahkan"
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="get-all-reward">
+            <a href="#/?id=get-all-reward" data-id="get-all-reward" class="anchor"><span>Get All Hadiah</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/reward</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>GET</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Menampilkan Hadiah",
+    "reward": [
+        {
+            "reward_id": "c033e601-c86e-4bcc-8e74-38c935396961",
+            "title": "Diamond ML",
+            "description": "100 diamond",
+            "price": 200,
+            "image": "44c546a481505dbd25d11cf766528369.png",
+            "url": "http://localhost:5000/images/44c546a481505dbd25d11cf766528369.png"
+        },
+        {
+            "reward_id": "1435c49c-9a86-4cd5-8312-e9e0ae583ecf",
+            "title": "hadiah 1",
+            "description": "deskripsi hadiah 1",
+            "price": 5000,
+            "image": "8e31ecf6285f9c3e12036c24ac3d38cb.jpg",
+            "url": "http://localhost:5000/images/8e31ecf6285f9c3e12036c24ac3d38cb.jpg"
+        }
+    ]
+}</code></pre>
+            </li>
+          </ul>
+                    <h4 id="get-single-reward">
+            <a href="#/?id=get-single-reward" data-id="get-single-reward" class="anchor"><span>Get Single Hadiah</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/reward/{reward_id}</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>GET</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Menampilkan Hadiah",
+    "reward": {
+        "reward_id": "c033e601-c86e-4bcc-8e74-38c935396961",
+        "title": "Diamond ML",
+        "description": "100 diamond",
+        "price": 200,
+        "image": "44c546a481505dbd25d11cf766528369.png",
+        "url": "http://localhost:5000/images/44c546a481505dbd25d11cf766528369.png"
+    }
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="update-reward">
+            <a href="#/?id=update-reward" data-id="update-reward" class="anchor"><span>Update hadiah</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/reward/{reward_id}</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>PATCH</code></li>
+              </ul>
+            </li>
+            <li>
+              Headers
+              <ul>
+                <li><code>Content-Type</code> : <code>multipart/form-data</code></li>
+              </ul>
+            </li>
+            <li>
+              Request Body
+              <ul>
+                <li><code>title</code> as <code>string</code></li>
+                <li><code>description</code> as <code>string</code></li>
+                <li><code>price</code> as <code>integer</code></li>
+                <li><code>image</code> as <code>file</code>, must be a valid image file, max size 1MB</li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Data User Telah Diubah"
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="delete-reward">
+            <a href="#/?id=delete-reward" data-id="delete-reward" class="anchor"><span>Delete Hadiah</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/reward/{reward_id}</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>DELETE</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Hadiah Berhasil Diubah"
+}</code></pre>
+            </li>
+          </ul>
+          <h3 id="redeem">
+            <a href="#/?id=redeem" data-id="redeem" class="anchor"><span>Penukaran</span></a>
+          </h3>
+          <h4 id="add-new-redeem">
+            <a href="#/?id=add-new-redeem" data-id="submit-new-tugas" class="anchor"><span>Add New Penukaran</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/redeem</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>POST</code></li>
+              </ul>
+            </li>
+            <li>
+              Request Body
+              <ul>
+                <li><code>note</code> as <code>string</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Redeem Hadiah Berhasil"
+}</code></pre>
+            </li>
+          </ul>
+          <h4 id="get-all-redeem">
+            <a href="#/?id=get-all-redeem" data-id="get-all-redeem" class="anchor"><span>Get All Penukaran</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/redeem</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>GET</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Menampilkan Data Redeem",
+    "redeem": [
+        {
+            "redeem_id": "5844df7c-4307-4d6b-807b-e46bbaf65e02",
+            "note": "Mau printer warna Biru",
+            "reward": {
+                "title": "Printer"
+            },
+            "user": {
+                "name": "anak"
+            }
+        },
+                {
+            "redeem_id": "dsgfdgfh-ddf5-c45g-saas-sdgdfhfgjgg",
+            "note": "Mau printer warna Hitam",
+            "reward": {
+                "title": "Printer"
+            },
+            "user": {
+                "name": "anak"
+            }
+        }
+    ]
+}</code></pre>
+            </li>
+          </ul>
+                    <h4 id="get-single-redeem">
+            <a href="#/?id=get-single-redeem" data-id="get-single-redeem" class="anchor"><span>Get Single Penukaran</span></a>
+          </h4>
+          <ul>
+            <li>
+              URL
+              <ul>
+                <li><code>/redeem/{redeem_id}</code></li>
+              </ul>
+            </li>
+            <li>
+              Method
+              <ul>
+                <li><code>GET</code></li>
+              </ul>
+            </li>
+            <li>
+              Response
+              <pre v-pre="" data-lang="json"><code class="lang-json">{
+    "status": "Berhasil",
+    "pesan": "Menampilkan Data Redeem",
+    "redeem": {
+        "redeem_id": "5844df7c-4307-4d6b-807b-e46bbaf65e02",
+        "note": "Mau printer warna Biru",
+        "reward": {
+            "title": "Printer"
+        },
+        "user": {
+            "name": "anak"
+        }
+    }
+}</code></pre>
+            </li>
+          </ul>
+                  </article>
+      </section>
+    </main>
+    <script>
+      window.$docsify = {
+        name: '',
+        repo: '',
+      };
+    </script>
+    <!-- Docsify v4 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+    <div class="progress" style="opacity: 0; width: 0%"></div>
+  </body>
+</html>
